@@ -45,16 +45,23 @@
 }
 .barraMenu nav ul li{
     display: inline-block;
-    font-size: 0.75rem;
-    padding: 0.5rem;
+    font-size: 1rem;
+    padding: 0.1rem;
     margin: 0.1rem;
-    background-color:#B1CDF0;
-    border-radius: 1rem;
+    background-color:#011C43;
+    
        
 }
 .barraMenu nav ul li:hover{
     background-color:#99bfee;
     transform: scale(1.05);
+    border-radius: 0.5rem;
+             
+}
+.header-b div nav ul li:hover{
+    background-color:#99bfee;
+    transform: scale(1.05);
+    border-radius: 0.5rem;
              
 }
 .barraTop img{
@@ -351,5 +358,7 @@ section ol{
     background-color: #B1CDF0;
 }
 
+
+/*paginna bootstrap*/
 
 
