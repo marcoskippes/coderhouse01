@@ -1,0 +1,248 @@
+/*Proyecto MKIPPES*/
+
+/*RESET GENERAL*/
+
+@import "base/variables";
+@import "base/mixin";
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/*ESTILOS DE TODO EL BODY*/
+
+body{
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    color: #393767;
+    width: 100vw;
+    .header-b{
+        div{ 
+            nav{
+                ul{ 
+                    li:hover{
+        background-color: $color-bg;
+        transform: scale(1.05);
+        border-radius: 0.5rem; 
+                    }
+                }
+            };
+            div{
+                .barraTop{
+                    display: flex;
+                    background-color:$color-bg ;
+                    justify-content: space-between;
+                    padding: 0.2rem;
+                    img{
+                        height:1.5rem;     
+                    }
+                };
+                .logo{
+                    height: 5rem;
+                }
+            }
+
+        }
+    };                  
+    .header{
+        display: flex;
+        flex-direction: column;
+        width: 100%;   
+        .barraTop{
+            display: flex;
+            background-color:$color-bg ;
+            justify-content: space-between;
+            padding: 0.2rem;
+            img{
+                height:1.5rem;     
+            }
+        };
+        .barraMenu{
+            display: flex;
+            background-color:$color-menu;
+            justify-content: space-between;
+            align-items: center;
+            font-family: $font-std;
+            .logo{
+                height: 5rem;
+            };
+            nav{
+                padding: 0.2rem;
+                ul{
+                    list-style: none; 
+                    text-align: center;
+                    li{
+                        display: inline-block;
+                        font-size: 1rem;
+                        padding: 0.1rem;
+                        margin: 0.1rem;
+                        background-color:$color-menu;      
+                    };
+                    li:hover{
+                        background-color:$color-bg;
+                        transform: scale(1.05);
+                        border-radius: 0.5rem;
+                                 
+                    }
+                }    
+            }
+
+        }
+    };
+    .main{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "mainText mainText animacion"
+        "img-1 img-2 img-3";
+        font-family: $font-std;
+        background-color:$color-bg ;
+        justify-items: center;
+        align-items: center;
+        .mainText{
+            grid-area: mainText;
+            text-align: left;
+            padding: 2rem;
+            line-height: 200%;
+            h1{
+                font-size:2.2rem
+            }; 
+            p{
+                font-size:1.3rem
+            } 
+        };
+        .animacion{
+            grid-area: animacion;
+            max-width: 100%;
+            animation-name: myweb;
+            animation-duration: 10s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+               
+        };
+        .img-1{
+            grid-area: img-1;
+            max-width: 80%;
+            padding: 1rem;
+        };
+        .img-2{
+            grid-area: img-2;
+            max-width: 80%;
+            padding: 1rem;
+        };
+        .img-3{
+            grid-area: img-3;
+            max-width: 80%;
+            padding: 1rem;
+        }
+        
+
+
+
+    };
+    
+    .mainVideo{/*Estilo main con video*/
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "mainTextVideo video";
+        font-family: $font-std;
+        background-color:$color-boton;
+        justify-items: center;
+        align-items: center;
+        .video{
+            grid-area: video;
+            width: 100%;
+            padding: 2rem;
+        };
+        .mainTextVideo{
+            grid-area: mainTextVideo;
+            text-align: left;
+            padding: 2rem;
+            line-height: 200%;
+            h1{
+                font-size:2.2rem
+            };
+            p{
+                font-size:1.3rem
+            } 
+        }
+    };
+    .mainSoloText{/*main solo texto*/
+        font-family: $font-std;
+        background-color:$color-boton;
+        text-align: center;
+        .soloText{
+            padding: 2rem;
+            line-height: 200%;
+            h1{
+                font-size:2.2rem
+            };
+            p{
+                font-size:1.3rem
+            } 
+        }
+    }
+    .section{/*estilos del section*/
+        background-color:$color-menu;
+        display: flex;
+        font-family: $font-std;
+        font-size: 0.9rem;
+        color: white;
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        h2{
+            font-family: $font-std;
+            font-size: 4rem;
+            border-top: 0.01rem solid  white;
+            padding-top: 3rem;
+        };
+        h3{
+            border-bottom: 0.01rem solid  white;
+            padding-bottom: 3rem;
+        }
+        ol{
+            font-size: 1rem;
+            list-style: none;
+            line-height: 2rem;
+            margin-top:2rem;
+            text-align: center;
+            padding-left: 0;
+        };
+        .imgRedes{
+            margin: 1rem;
+            gap: 1rem;
+            justify-content: center;
+            img{
+                height: 1rem;
+            }
+        }
+        
+    }
+    .footer{/*propiedades del footer*/
+        background-color:$color-boton;
+        grid-area: footer;
+        display: flex;
+        font-family: $font-std;
+        font-size: 0.5rem;
+        padding: 0.5rem;
+        justify-content: center;
+        align-items: flex-end;
+        .whatsapp{
+            position:fixed;
+            bottom:2rem;
+            right:2rem;
+            img{
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+    }
+
+
+
+}

@@ -1,364 +1,239 @@
+/*Proyecto MKIPPES*/
+/*RESET GENERAL*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none; }
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-}
-
-.body{
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
-    color: #393767;
-    width: 100vw;
-}
-
-/*ESTILOS HEADER*/
-
-.header{
+/*ESTILOS DE TODO EL BODY*/
+body {
+  background: linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 100%);
+  color: #393767;
+  width: 100vw; }
+  body .header-b div nav ul li:hover {
+    background-color: #B1CDF0;
+    transform: scale(1.05);
+    border-radius: 0.5rem; }
+  body .header-b div div .barraTop {
+    display: flex;
+    background-color: #B1CDF0;
+    justify-content: space-between;
+    padding: 0.2rem; }
+    body .header-b div div .barraTop img {
+      height: 1.5rem; }
+  body .header-b div div .logo {
+    height: 5rem; }
+  body .header {
     display: flex;
     flex-direction: column;
-    width: 100%;         
-}
-.barraTop{
-    display: flex;
-    background-color:#B1CDF0 ;
-    justify-content: space-between;
-    padding: 0.2rem;  
-}
-.barraMenu{
-    display: flex;
-    background-color:#011C43;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'Rubik', sans-serif;
-    
-}
-
-.barraMenu nav{
-    padding: 0.2rem;
-    
-}
-.barraMenu nav ul{
-    list-style: none; 
-    text-align: center;
-   
-}
-.barraMenu nav ul li{
-    display: inline-block;
-    font-size: 1rem;
-    padding: 0.1rem;
-    margin: 0.1rem;
-    background-color:#011C43;
-    
-       
-}
-.barraMenu nav ul li:hover{
-    background-color:#99bfee;
-    transform: scale(1.05);
-    border-radius: 0.5rem;
-             
-}
-.header-b div nav ul li:hover{
-    background-color:#99bfee;
-    transform: scale(1.05);
-    border-radius: 0.5rem;
-             
-}
-.barraTop img{
-    height:1.5rem;    
-}
-.logo{
-    height: 5rem;
-}
-
-/*ESTILOS MAIN*/
-
-.main{
+    width: 100%; }
+    body .header .barraTop {
+      display: flex;
+      background-color: #B1CDF0;
+      justify-content: space-between;
+      padding: 0.2rem; }
+      body .header .barraTop img {
+        height: 1.5rem; }
+    body .header .barraMenu {
+      display: flex;
+      background-color: #011C43;
+      justify-content: space-between;
+      align-items: center;
+      font-family: "Rubik", sans-serif; }
+      body .header .barraMenu .logo {
+        height: 5rem; }
+      body .header .barraMenu nav {
+        padding: 0.2rem; }
+        body .header .barraMenu nav ul {
+          list-style: none;
+          text-align: center; }
+          body .header .barraMenu nav ul li {
+            display: inline-block;
+            font-size: 1rem;
+            padding: 0.1rem;
+            margin: 0.1rem;
+            background-color: #011C43; }
+          body .header .barraMenu nav ul li:hover {
+            background-color: #B1CDF0;
+            transform: scale(1.05);
+            border-radius: 0.5rem; }
+  body .main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: 
-    "mainText mainText animacion"
-    "img-1 img-2 img-3";
-    font-family: 'Rubik', sans-serif;
-    background-color:#B1CDF0 ;
+    grid-template-areas: "mainText mainText animacion" "img-1 img-2 img-3";
+    font-family: "Rubik", sans-serif;
+    background-color: #B1CDF0;
     justify-items: center;
-    align-items: center;
-}
-
-.mainText{
-    grid-area: mainText;
-    text-align: left;
-    padding: 2rem;
-    line-height: 200%;
-}
-
-.mainText h1{
-    font-size:2.2rem
-} 
-.mainText p{
-    font-size:1.3rem
-} 
-
-
-.animacion{
-    grid-area: animacion;
-    max-width: 100%;
-    animation-name: myweb;
-    animation-duration: 10s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-       
-}
-
-.img-1{
-    grid-area: img-1;
-    max-width: 80%;
-    padding: 1rem;
-}
-.img-2{
-    grid-area: img-2;
-    max-width: 80%;
-    padding: 1rem;
-}
-.img-3{
-    grid-area: img-3;
-    max-width: 80%;
-    padding: 1rem;
-}
-           
-/*ESTILOS MAIN CON VIDEO*/
-
-.mainVideo{
+    align-items: center; }
+    body .main .mainText {
+      grid-area: mainText;
+      text-align: left;
+      padding: 2rem;
+      line-height: 200%; }
+      body .main .mainText h1 {
+        font-size: 2.2rem; }
+      body .main .mainText p {
+        font-size: 1.3rem; }
+    body .main .animacion {
+      grid-area: animacion;
+      max-width: 100%;
+      animation-name: myweb;
+      animation-duration: 10s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite; }
+    body .main .img-1 {
+      grid-area: img-1;
+      max-width: 80%;
+      padding: 1rem; }
+    body .main .img-2 {
+      grid-area: img-2;
+      max-width: 80%;
+      padding: 1rem; }
+    body .main .img-3 {
+      grid-area: img-3;
+      max-width: 80%;
+      padding: 1rem; }
+  body .mainVideo {
+    /*Estilo main con video*/
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    "mainTextVideo video";
-    font-family: 'Rubik', sans-serif;
-    background-color:#B1CDF0 ;
+    grid-template-areas: "mainTextVideo video";
+    font-family: "Rubik", sans-serif;
+    background-color: #99bfee;
     justify-items: center;
-    align-items: center;
-}
-
-.video{
-    grid-area: video;
-    width: 100%;
-    padding: 2rem;
-}
-.mainTextVideo{
-    grid-area: mainTextVideo;
-    text-align: left;
-    padding: 2rem;
-    line-height: 200%;
-}
-
-.mainTextVideo h1{
-    font-size:2.2rem
-} 
-.mainTextVideo p{
-    font-size:1.3rem
-} 
-
-
-/*ESTILOS MAIN SOLO TEXTO*/
-
-.mainSoloText{
-    font-family: 'Rubik', sans-serif;
-    background-color:#B1CDF0 ;
-    text-align: center;
-}
-
-.soloText{
-    padding: 2rem;
-    line-height: 200%;
-}
-
-.soloText h1{
-    font-size:2.2rem
-} 
-.soloText p{
-    font-size:1.3rem
-} 
-
-
-/*ESTILOS SECTION*/
-
-.section{
-    background-color:#011C43;
+    align-items: center; }
+    body .mainVideo .video {
+      grid-area: video;
+      width: 100%;
+      padding: 2rem; }
+    body .mainVideo .mainTextVideo {
+      grid-area: mainTextVideo;
+      text-align: left;
+      padding: 2rem;
+      line-height: 200%; }
+      body .mainVideo .mainTextVideo h1 {
+        font-size: 2.2rem; }
+      body .mainVideo .mainTextVideo p {
+        font-size: 1.3rem; }
+  body .mainSoloText {
+    /*main solo texto*/
+    font-family: "Rubik", sans-serif;
+    background-color: #99bfee;
+    text-align: center; }
+    body .mainSoloText .soloText {
+      padding: 2rem;
+      line-height: 200%; }
+      body .mainSoloText .soloText h1 {
+        font-size: 2.2rem; }
+      body .mainSoloText .soloText p {
+        font-size: 1.3rem; }
+  body .section {
+    /*estilos del section*/
+    background-color: #011C43;
     display: flex;
-    font-family: 'Rubik', sans-serif;
+    font-family: "Rubik", sans-serif;
     font-size: 0.9rem;
     color: white;
     text-align: center;
     flex-direction: column;
-    justify-content: center;
-    
-}
-
-section h2{
-    font-family: 'Rubik', sans-serif;
-    font-size: 4rem;
-    border-top: 0.01rem solid  white;
-    padding-top: 3rem;
-}
-
-section h3{
-    border-bottom: 0.01rem solid  white;
-    padding-bottom: 3rem;
-}
-section ol{
-    font-size: 1rem;
-    list-style: none;
-    line-height: 2rem;
-    margin-top:2rem;
-}
-
-.imgRedes{
-    margin: 1rem;
-    gap: 1rem;
-    justify-content: center;
-}
-
-.imgRedes img{
-    height: 1rem;
-}
-
-
-/*PROPIEDADES FOOTER*/
-
-.footer{
-    background-color:#B1CDF0 ;
+    justify-content: center; }
+    body .section h2 {
+      font-family: "Rubik", sans-serif;
+      font-size: 4rem;
+      border-top: 0.01rem solid  white;
+      padding-top: 3rem; }
+    body .section h3 {
+      border-bottom: 0.01rem solid  white;
+      padding-bottom: 3rem; }
+    body .section ol {
+      font-size: 1rem;
+      list-style: none;
+      line-height: 2rem;
+      margin-top: 2rem;
+      text-align: center;
+      padding-left: 0; }
+    body .section .imgRedes {
+      margin: 1rem;
+      gap: 1rem;
+      justify-content: center; }
+      body .section .imgRedes img {
+        height: 1rem; }
+  body .footer {
+    /*propiedades del footer*/
+    background-color: #99bfee;
     grid-area: footer;
     display: flex;
-    font-family: 'Rubik', sans-serif;
+    font-family: "Rubik", sans-serif;
     font-size: 0.5rem;
     padding: 0.5rem;
     justify-content: center;
-    align-items: flex-end;
-}
-
-.whatsapp{
-    position:fixed;
-    bottom:2rem;
-    right:2rem;
-    
-}
-
-.whatsapp img{
-    width: 3rem;
-    height: 3rem;
-}
-
+    align-items: flex-end; }
+    body .footer .whatsapp {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem; }
+      body .footer .whatsapp img {
+        width: 3rem;
+        height: 3rem; }
 
 /*MEDIAQUERIES*/
-
-@media screen and (max-width:480px){
-    html{
-        font-size: 12px;
-    }
-    .animacion{
-            display: none;
-    }
-    .main{
-            grid-template-columns: 1fr;
-            grid-template-areas: 
-                        "mainText"
-                        "animacion"
-                        "img-1"
-                        "img-2"
-                        "img-3";
-    }
-    .mainText{
-        text-align: center;
-    }    
-    .barraMenu{
-        flex-direction: column;  
-    }
-    .img-1{
-        max-width: 50%;
-        }
-    .img-2{
-        max-width: 50%;
-    
-    }
-    .img-3{
-        max-width: 50%;
-   
-    }  
-
-                /*ESTILOS MAIN CON VIDEO*/
-
-.mainVideo{
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 12px; }
+  .animacion {
+    display: none; }
+  .main {
+    grid-template-columns: 1fr;
+    grid-template-areas: "mainText" "animacion" "img-1" "img-2" "img-3"; }
+  .mainText {
+    text-align: center; }
+  .barraMenu {
+    flex-direction: column; }
+  .img-1 {
+    max-width: 50%; }
+  .img-2 {
+    max-width: 50%; }
+  .img-3 {
+    max-width: 50%; }
+  /*ESTILOS MAIN CON VIDEO*/
+  .mainVideo {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas: 
-    "mainTextVideo"
-    "video";
-    font-family: 'Rubik', sans-serif;
-    background-color:#B1CDF0 ;
+    grid-template-areas: "mainTextVideo" "video";
+    font-family: "Rubik", sans-serif;
+    background-color: #99bfee;
     justify-items: center;
-    align-items: center;
-}
+    align-items: center; } }
 
+@media screen and (min-width: 480px) and (max-width: 600px) {
+  html {
+    font-size: 14px; }
+  .main {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "mainText mainText animacion" "img-1 img-2 img-3"; }
+  .mainText {
+    text-align: center; }
+  /*ESTILOS MAIN SOLO TEXTO*/
+  /*ESTILOS MAIN CON VIDEO*/
+  .mainVideo {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "mainTextVideo" "video";
+    font-family: "Rubik", sans-serif;
+    background-color: #99bfee;
+    justify-items: center;
+    align-items: center; } }
 
-}
-@media screen and (min-width:480px) and (max-width:600px){
-    html{
-        font-size: 14px;
-    }
-    
-    .main{
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-areas: 
-                        "mainText mainText animacion"
-                        "img-1 img-2 img-3";
-    }
-    .mainText{
-        text-align: center;
-    }    
-
-/*ESTILOS MAIN SOLO TEXTO*/
-
-
-/*ESTILOS MAIN CON VIDEO*/
-
-    .mainVideo{
-       display: grid;
-      grid-template-columns: 1fr;
-      grid-template-areas: 
-      "mainTextVideo"
-      "video";
-       font-family: 'Rubik', sans-serif;
-       background-color:#B1CDF0 ;
-       justify-items: center;
-     align-items: center;
-}
-
-      
-}
-    
 /*ANIMACION*/
-
-
-@keyframes myweb{
-
-    from{
-        transform: scale(0.8);
-    }
-    to{
-        transform: scale(0.9);
-    }
-
-}
+@keyframes myweb {
+  from {
+    transform: scale(0.8); }
+  to {
+    transform: scale(0.9); } }
 
 .header-b {
-    background-color:#011C43;
-}
+  background-color: #011C43; }
 
 .main-b {
-    background-color: #B1CDF0;
-}
-
-
-/*paginna bootstrap*/
-
-
+  background-color: #99bfee; }
