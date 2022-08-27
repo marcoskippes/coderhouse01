@@ -7,39 +7,47 @@
   text-decoration: none; }
 
 /*ESTILOS DE TODO EL BODY*/
+@media (max-width: 480px) {
+  html {
+    ont-size: 12px; } }
+
+@media (min-width: 480px) and (max-width: 600px) {
+  html {
+    font-size: 14px; } }
+
 body {
   background: linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 100%);
   color: #393767;
   width: 100vw; }
-  body .header-b div nav ul li:hover {
-    background-color: #B1CDF0;
-    transform: scale(1.05);
-    border-radius: 0.5rem; }
-  body .header-b div div .barraTop {
-    display: flex;
-    background-color: #B1CDF0;
-    justify-content: space-between;
-    padding: 0.2rem; }
-    body .header-b div div .barraTop img {
-      height: 1.5rem; }
-  body .header-b div div .logo {
-    height: 5rem; }
-  body .header {
-    display: flex;
-    flex-direction: column;
-    width: 100%; }
-    body .header .barraTop {
+  body .header-b {
+    background-color: #011C43; }
+    body .header-b div nav ul li:hover {
+      background-color: #B1CDF0;
+      transform: scale(1.05);
+      border-radius: 0.5rem; }
+    body .header-b div div .barraTop, body .header-b div div .header .barraMenu, body .header .header-b div div .barraMenu {
       display: flex;
       background-color: #B1CDF0;
       justify-content: space-between;
       padding: 0.2rem; }
-      body .header .barraTop img {
+      body .header-b div div .barraTop img, body .header-b div div .header .barraMenu img, body .header .header-b div div .barraMenu img {
         height: 1.5rem; }
-    body .header .barraMenu {
+    body .header-b div div .logo {
+      height: 5rem; }
+  body .header {
+    display: flex;
+    flex-direction: column;
+    width: 100%; }
+    body .header .barraTop, body .header .barraMenu {
       display: flex;
-      background-color: #011C43;
+      background-color: #B1CDF0;
       justify-content: space-between;
       align-items: center;
+      padding: 0.2rem; }
+      body .header .barraTop img, body .header .barraMenu img {
+        height: 1.5rem; }
+    body .header .barraMenu {
+      background-color: #011C43;
       font-family: "Rubik", sans-serif; }
       body .header .barraMenu .logo {
         height: 5rem; }
@@ -58,6 +66,8 @@ body {
             background-color: #B1CDF0;
             transform: scale(1.05);
             border-radius: 0.5rem; }
+  body .main-b {
+    background-color: #B1CDF0; }
   body .main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -66,11 +76,25 @@ body {
     background-color: #B1CDF0;
     justify-items: center;
     align-items: center; }
+    @media (max-width: 480px) {
+      body .main {
+        grid-template-columns: 1fr;
+        grid-template-areas: "mainText" "animacion" "img-1" "img-2" "img-3"; } }
+    @media (min-width: 480px) and (max-width: 600px) {
+      body .main {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "mainText mainText animacion" "img-1 img-2 img-3"; } }
     body .main .mainText {
       grid-area: mainText;
       text-align: left;
       padding: 2rem;
       line-height: 200%; }
+      @media (max-width: 480px) {
+        body .main .mainText {
+          text-align: center; } }
+      @media (min-width: 480px) and (max-width: 600px) {
+        body .main .mainText {
+          text-align: center; } }
       body .main .mainText h1 {
         font-size: 2.2rem; }
       body .main .mainText p {
@@ -82,18 +106,23 @@ body {
       animation-duration: 10s;
       animation-timing-function: linear;
       animation-iteration-count: infinite; }
-    body .main .img-1 {
+
+@keyframes myweb {
+  from {
+    transform: scale(0.8); }
+  to {
+    transform: scale(0.9); } }
+      @media (max-width: 480px) {
+        body .main .animacion {
+          display: none; } }
+    body .main .img-1, body .main .img-2, body .main .img-3 {
       grid-area: img-1;
       max-width: 80%;
       padding: 1rem; }
     body .main .img-2 {
-      grid-area: img-2;
-      max-width: 80%;
-      padding: 1rem; }
+      grid-area: img-2; }
     body .main .img-3 {
-      grid-area: img-3;
-      max-width: 80%;
-      padding: 1rem; }
+      grid-area: img-3; }
   body .mainVideo {
     /*Estilo main con video*/
     display: grid;
@@ -103,6 +132,16 @@ body {
     background-color: #99bfee;
     justify-items: center;
     align-items: center; }
+    @media (max-width: 480px) {
+      body .mainVideo {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "mainTextVideo" "video"; } }
+    @media (min-width: 480px) and (max-width: 600px) {
+      body .mainVideo {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "mainTextVideo" "video"; } }
     body .mainVideo .video {
       grid-area: video;
       width: 100%;
@@ -176,64 +215,3 @@ body {
       body .footer .whatsapp img {
         width: 3rem;
         height: 3rem; }
-
-/*MEDIAQUERIES*/
-@media screen and (max-width: 480px) {
-  html {
-    font-size: 12px; }
-  .animacion {
-    display: none; }
-  .main {
-    grid-template-columns: 1fr;
-    grid-template-areas: "mainText" "animacion" "img-1" "img-2" "img-3"; }
-  .mainText {
-    text-align: center; }
-  .barraMenu {
-    flex-direction: column; }
-  .img-1 {
-    max-width: 50%; }
-  .img-2 {
-    max-width: 50%; }
-  .img-3 {
-    max-width: 50%; }
-  /*ESTILOS MAIN CON VIDEO*/
-  .mainVideo {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: "mainTextVideo" "video";
-    font-family: "Rubik", sans-serif;
-    background-color: #99bfee;
-    justify-items: center;
-    align-items: center; } }
-
-@media screen and (min-width: 480px) and (max-width: 600px) {
-  html {
-    font-size: 14px; }
-  .main {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "mainText mainText animacion" "img-1 img-2 img-3"; }
-  .mainText {
-    text-align: center; }
-  /*ESTILOS MAIN SOLO TEXTO*/
-  /*ESTILOS MAIN CON VIDEO*/
-  .mainVideo {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: "mainTextVideo" "video";
-    font-family: "Rubik", sans-serif;
-    background-color: #99bfee;
-    justify-items: center;
-    align-items: center; } }
-
-/*ANIMACION*/
-@keyframes myweb {
-  from {
-    transform: scale(0.8); }
-  to {
-    transform: scale(0.9); } }
-
-.header-b {
-  background-color: #011C43; }
-
-.main-b {
-  background-color: #99bfee; }

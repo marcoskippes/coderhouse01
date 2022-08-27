@@ -4,6 +4,7 @@
 
 @import "base/variables";
 @import "base/mixin";
+@import "base/maps";
 
 
 *{
@@ -15,16 +16,26 @@
 
 /*ESTILOS DE TODO EL BODY*/
 
+html{
+    @include media(xs) {
+        ont-size: 12px;
+      };
+    @include media(sm) {
+        font-size: 14px;
+      }
+}
+
 body{
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
     color: #393767;
     width: 100vw;
     .header-b{
+        background-color: map-get($estilos,color-menu);
         div{ 
             nav{
                 ul{ 
                     li:hover{
-        background-color: $color-bg;
+        background-color: map-get($estilos,color-bg);
         transform: scale(1.05);
         border-radius: 0.5rem; 
                     }
@@ -33,7 +44,7 @@ body{
             div{
                 .barraTop{
                     display: flex;
-                    background-color:$color-bg ;
+                    background-color:map-get($estilos,color-bg) ;
                     justify-content: space-between;
                     padding: 0.2rem;
                     img{
@@ -53,18 +64,17 @@ body{
         width: 100%;   
         .barraTop{
             display: flex;
-            background-color:$color-bg ;
+            background-color:map-get($estilos,color-bg);
             justify-content: space-between;
+            align-items: center;
             padding: 0.2rem;
             img{
                 height:1.5rem;     
             }
         };
         .barraMenu{
-            display: flex;
-            background-color:$color-menu;
-            justify-content: space-between;
-            align-items: center;
+            @extend .barraTop;
+            background-color:map-get($estilos,color-menu);
             font-family: $font-std;
             .logo{
                 height: 5rem;
@@ -79,10 +89,10 @@ body{
                         font-size: 1rem;
                         padding: 0.1rem;
                         margin: 0.1rem;
-                        background-color:$color-menu;      
+                        background-color:map-get($estilos,color-menu);      
                     };
                     li:hover{
-                        background-color:$color-bg;
+                        background-color:map-get($estilos,color-bg);
                         transform: scale(1.05);
                         border-radius: 0.5rem;
                                  
@@ -92,6 +102,9 @@ body{
 
         }
     };
+    .main-b{
+        background-color: map-get($estilos,color-bg);
+    }
     .main{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -99,14 +112,36 @@ body{
         "mainText mainText animacion"
         "img-1 img-2 img-3";
         font-family: $font-std;
-        background-color:$color-bg ;
+        background-color:map-get($estilos,color-bg) ;
         justify-items: center;
         align-items: center;
+        @include media(xs) {
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+                        "mainText"
+                        "animacion"
+                        "img-1"
+                        "img-2"
+                        "img-3";
+          };
+        @include media(sm) {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: 
+                        "mainText mainText animacion"
+                        "img-1 img-2 img-3";
+          }
+
         .mainText{
             grid-area: mainText;
             text-align: left;
             padding: 2rem;
             line-height: 200%;
+            @include media(xs) {
+                text-align: center;
+              };
+            @include media(sm) {
+                text-align: center
+              }
             h1{
                 font-size:2.2rem
             }; 
@@ -121,6 +156,19 @@ body{
             animation-duration: 10s;
             animation-timing-function: linear;
             animation-iteration-count: infinite;
+            @keyframes myweb{
+
+                from{
+                    transform: scale(0.8);
+                }
+                to{
+                    transform: scale(0.9);
+                }
+            
+            }
+            @include media(xs) {
+                display: none;
+              }
                
         };
         .img-1{
@@ -130,18 +178,12 @@ body{
         };
         .img-2{
             grid-area: img-2;
-            max-width: 80%;
-            padding: 1rem;
+            @extend .img-1;
         };
         .img-3{
             grid-area: img-3;
-            max-width: 80%;
-            padding: 1rem;
+            @extend .img-1;
         }
-        
-
-
-
     };
     
     .mainVideo{/*Estilo main con video*/
@@ -150,9 +192,23 @@ body{
         grid-template-areas: 
         "mainTextVideo video";
         font-family: $font-std;
-        background-color:$color-boton;
+        background-color:map-get($estilos,color-boton);
         justify-items: center;
         align-items: center;
+        @include media(xs) {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            "mainTextVideo"
+            "video";
+          };
+        @include media(sm) {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            "mainTextVideo"
+            "video";
+          }
         .video{
             grid-area: video;
             width: 100%;
@@ -173,7 +229,7 @@ body{
     };
     .mainSoloText{/*main solo texto*/
         font-family: $font-std;
-        background-color:$color-boton;
+        background-color:map-get($estilos,color-boton);
         text-align: center;
         .soloText{
             padding: 2rem;
@@ -187,7 +243,7 @@ body{
         }
     }
     .section{/*estilos del section*/
-        background-color:$color-menu;
+        background-color:map-get($estilos,color-menu);
         display: flex;
         font-family: $font-std;
         font-size: 0.9rem;
@@ -224,7 +280,7 @@ body{
         
     }
     .footer{/*propiedades del footer*/
-        background-color:$color-boton;
+        background-color:map-get($estilos,color-boton);
         grid-area: footer;
         display: flex;
         font-family: $font-std;
