@@ -53,6 +53,9 @@ body{
                 };
                 .logo{
                     height: 5rem;
+                    @include media(xs) {
+                        display: none
+                      };
                 }
             }
 
@@ -78,7 +81,13 @@ body{
             font-family: $font-std;
             .logo{
                 height: 5rem;
+                @include media(xs) {
+                    display: none
+                  };
             };
+            .logo:hover{
+                transform: scale(1.05);
+            }
             nav{
                 padding: 0.2rem;
                 ul{

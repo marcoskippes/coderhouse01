@@ -34,6 +34,9 @@ body {
         height: 1.5rem; }
     body .header-b div div .logo {
       height: 5rem; }
+      @media (max-width: 480px) {
+        body .header-b div div .logo {
+          display: none; } }
   body .header {
     display: flex;
     flex-direction: column;
@@ -51,6 +54,11 @@ body {
       font-family: "Rubik", sans-serif; }
       body .header .barraMenu .logo {
         height: 5rem; }
+        @media (max-width: 480px) {
+          body .header .barraMenu .logo {
+            display: none; } }
+      body .header .barraMenu .logo:hover {
+        transform: scale(1.05); }
       body .header .barraMenu nav {
         padding: 0.2rem; }
         body .header .barraMenu nav ul {
