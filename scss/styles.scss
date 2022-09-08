@@ -184,6 +184,10 @@ body{
             grid-area: img-1;
             max-width: 80%;
             padding: 1rem;
+            &:hover{
+                filter: opacity(.7);
+                
+            }
         };
         .img-2{
             grid-area: img-2;
@@ -277,6 +281,16 @@ body{
             margin-top:2rem;
             text-align: center;
             padding-left: 0;
+            li{
+                a{
+                text-decoration: none;
+                color: white;
+                }
+                
+            }
+            li:hover{
+                transform: scale(1.05);
+                }
         };
         .imgRedes{
             margin: 1rem;
