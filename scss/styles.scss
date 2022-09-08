@@ -197,6 +197,10 @@ body{
             grid-area: img-3;
             @extend .img-1;
         }
+        a{
+            display: flex;
+            justify-content: center
+        }
     };
     
     .mainVideo{/*Estilo main con video*/

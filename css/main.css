@@ -133,6 +133,9 @@ body {
       grid-area: img-2; }
     body .main .img-3 {
       grid-area: img-3; }
+    body .main a {
+      display: flex;
+      justify-content: center; }
   body .mainVideo {
     /*Estilo main con video*/
     display: grid;
